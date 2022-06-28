@@ -3,6 +3,8 @@
 mkdir -p pretrained
 
 # download vqgan
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
 git lfs install
 git clone https://huggingface.co/dalle-mini/vqgan_imagenet_f16_16384 ./pretrained/vqgan
 
