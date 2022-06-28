@@ -1,4 +1,6 @@
 import streamlit as st
 import subprocess
+import os
 
-subprocess.call("bash setup.sh", shell=True)
+if not os.path.isdir("pretrained"):
+  subprocess.call("bash setup.sh", shell=True)
